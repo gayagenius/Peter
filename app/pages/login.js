@@ -20,8 +20,9 @@ export default function Login() {
       localStorage.setItem("token", res.data.token);
       router.push("/dashboard");
     } catch (error) {
-      alert("Login failed!");
+      console.error("Login failed:", error); // ✅ Use `error` instead of leaving it unused
     }
+   
   };
 
   return (
